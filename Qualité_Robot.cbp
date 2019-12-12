@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Qualité_Robot" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Qualité_Robot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Qualité_Robot" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Case.h" />
+		<Unit filename="include/Débrits.h" />
+		<Unit filename="include/Déplacement.h" />
+		<Unit filename="include/Joueur.h" />
+		<Unit filename="include/Robot.h" />
+		<Unit filename="include/RobotAncien.h" />
+		<Unit filename="include/RobotModerne.h" />
+		<Unit filename="include/Score.h" />
+		<Unit filename="include/Terrain.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Case.cpp" />
+		<Unit filename="src/Débrits.cpp" />
+		<Unit filename="src/Déplacement.cpp" />
+		<Unit filename="src/Joueur.cpp" />
+		<Unit filename="src/Robot.cpp" />
+		<Unit filename="src/RobotAncien.cpp" />
+		<Unit filename="src/RobotModerne.cpp" />
+		<Unit filename="src/Score.cpp" />
+		<Unit filename="src/Terrain.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
