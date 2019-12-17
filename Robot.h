@@ -6,16 +6,16 @@ class Robot
 {
     public:
         Robot();
-        virtual ~Robot();
+        ~Robot();
         Robot( double x,double y, double direction);
-        virtual void avance(double distance)=0;
-        virtual void tourneAgauche(double angle)=0;
-        virtual void tourneAdroite( double angle)=0;
-
+        double x() const;
+        double y() const;
+        bool statutRobot() const ;
     private:
-        point d_position;
+        double d_x;
+        double d_y;
         double d_direction;
-
+        bool d_type_moderne;
 };
 
 #endif // ROBOT_H

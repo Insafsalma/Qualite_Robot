@@ -1,11 +1,20 @@
 #include "Robot.h"
 
-Robot::Robot()
+Robot :: robot()
+{}
+Robot :: robot( double x,double y, double ditrection):d_x{x},d_y{y}, d_direction{ditrection}
+{}
+Robot :: ~robot ()
+{}
+bool Robot :: statutRobot() const
 {
-    //ctor
+    return d_type_moderne;
 }
-
-Robot::~Robot()
+double Robot::x() const
 {
-    //dtor
+    return d_x;
+}
+double Robot::y() const
+{
+    return d_y;
 }

@@ -34,25 +34,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Case.h" />
-		<Unit filename="include/Débrits.h" />
-		<Unit filename="include/Déplacement.h" />
-		<Unit filename="include/Joueur.h" />
-		<Unit filename="include/Robot.h" />
-		<Unit filename="include/RobotAncien.h" />
-		<Unit filename="include/RobotModerne.h" />
-		<Unit filename="include/Score.h" />
-		<Unit filename="include/Terrain.h" />
+		<Unit filename="Case.cpp" />
+		<Unit filename="Case.h" />
+		<Unit filename="Débrits.cpp" />
+		<Unit filename="Débrits.h" />
+		<Unit filename="Déplacement.cpp" />
+		<Unit filename="Déplacement.h" />
+		<Unit filename="Joueur.cpp" />
+		<Unit filename="Joueur.h" />
+		<Unit filename="Robot.cpp" />
+		<Unit filename="Robot.h" />
+		<Unit filename="RobotAncien.cpp" />
+		<Unit filename="RobotAncien.h" />
+		<Unit filename="RobotModerne.cpp" />
+		<Unit filename="RobotModerne.h" />
+		<Unit filename="Score.cpp" />
+		<Unit filename="Score.h" />
+		<Unit filename="Terrain.cpp" />
+		<Unit filename="Terrain.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Case.cpp" />
-		<Unit filename="src/Débrits.cpp" />
-		<Unit filename="src/Déplacement.cpp" />
-		<Unit filename="src/Joueur.cpp" />
-		<Unit filename="src/Robot.cpp" />
-		<Unit filename="src/RobotAncien.cpp" />
-		<Unit filename="src/RobotModerne.cpp" />
-		<Unit filename="src/Score.cpp" />
-		<Unit filename="src/Terrain.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
