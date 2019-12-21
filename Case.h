@@ -5,12 +5,13 @@
 class Case
 {
     public:
-        Case();
+        Case(double x, double y);
         virtual ~Case();
-
-    protected:
-
+        double x() const;
+        double y() const;
     private:
+        double d_x;
+        double d_y;
 };
 
 #endif // CASE_H

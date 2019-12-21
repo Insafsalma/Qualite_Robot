@@ -1,11 +1,15 @@
 #include "Case.h"
 
-Case::Case()
-{
-    //ctor
-}
-
+Case:: Case(double x, double y):d_x{x},d_y{y}
+{}
 Case::~Case()
+{ }
+
+double Case:: x() const
 {
-    //dtor
+    return d_x;
+}
+double Case:: y() const
+{
+    return d_y;
 }

@@ -1,11 +1,13 @@
 #include "debris.h"
+#include "Case.h"
 
-debris::debris()
-{
-    //ctor
-}
+debris::debris(Case &position):d_position{position}
+{ }
 
 debris::~debris()
+{ }
+
+Case& debris:: position_debris() const
 {
-    //dtor
+    return d_position;
 }

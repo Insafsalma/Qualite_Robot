@@ -1,10 +1,10 @@
 #include "Robot.h"
 
-Robot :: robot()
+Robot :: Robot()
 {}
-Robot :: robot( double x,double y, double ditrection):d_x{x},d_y{y}, d_direction{ditrection}
+Robot :: Robot( double x,double y, double ditrection):d_x{x},d_y{y}, d_direction{ditrection}
 {}
-Robot :: ~robot ()
+Robot :: ~Robot ()
 {}
 bool Robot :: statutRobot() const
 {

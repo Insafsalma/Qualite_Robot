@@ -36,22 +36,18 @@
 		</Compiler>
 		<Unit filename="Case.cpp" />
 		<Unit filename="Case.h" />
-		<Unit filename="Débrits.cpp" />
-		<Unit filename="Débrits.h" />
-		<Unit filename="Déplacement.cpp" />
-		<Unit filename="Déplacement.h" />
 		<Unit filename="Joueur.cpp" />
 		<Unit filename="Joueur.h" />
 		<Unit filename="Robot.cpp" />
 		<Unit filename="Robot.h" />
-		<Unit filename="RobotAncien.cpp" />
-		<Unit filename="RobotAncien.h" />
-		<Unit filename="RobotModerne.cpp" />
-		<Unit filename="RobotModerne.h" />
 		<Unit filename="Score.cpp" />
 		<Unit filename="Score.h" />
 		<Unit filename="Terrain.cpp" />
 		<Unit filename="Terrain.h" />
+		<Unit filename="debris.cpp" />
+		<Unit filename="debris.h" />
+		<Unit filename="deplacement.cpp" />
+		<Unit filename="deplacement.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

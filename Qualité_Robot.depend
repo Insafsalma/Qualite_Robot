@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1576946532 source:d:\l3 miage\qualite\qualite_robot\deplacement.cpp
+	"deplacement.h"
+
+1576946532 d:\l3 miage\qualite\qualite_robot\deplacement.h
+
+1576945931 source:d:\l3 miage\qualite\qualite_robot\joueur.cpp
+	"Joueur.h"
+
+1576945931 d:\l3 miage\qualite\qualite_robot\joueur.h
+
+1576947967 source:d:\l3 miage\qualite\qualite_robot\case.cpp
+	"Case.h"
+
+1576947068 d:\l3 miage\qualite\qualite_robot\case.h
+
+1576945931 source:d:\l3 miage\qualite\qualite_robot\main.cpp
+	<iostream>
+
+1576945931 source:d:\l3 miage\qualite\qualite_robot\score.cpp
+	"Score.h"
+
+1576945931 d:\l3 miage\qualite\qualite_robot\score.h
+
+1576947609 source:d:\l3 miage\qualite\qualite_robot\robot.cpp
+	"Robot.h"
+
+1576945931 d:\l3 miage\qualite\qualite_robot\robot.h
+
+1576947803 source:d:\l3 miage\qualite\qualite_robot\debris.cpp
+	"debris.h"
+	"Case.h"
+
+1576947817 d:\l3 miage\qualite\qualite_robot\debris.h
+	"Case.h"
+
