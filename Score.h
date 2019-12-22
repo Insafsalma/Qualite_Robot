@@ -4,13 +4,14 @@
 
 class Score
 {
-    public:
-        Score();
+   public:
+        Score(int robot_detruit,int nbrrobotsterrain);
         virtual ~Score();
-
-    protected:
-
+        int nbrRobotDetruits() const;
+        int nbrRobotTerrain() const;
     private:
+    int d_nbr_robots_detruits;
+    int d_nbr_robots_terrain;
 };
 
 #endif // SCORE_H
