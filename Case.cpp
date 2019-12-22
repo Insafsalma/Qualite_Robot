@@ -13,3 +13,8 @@ double Case:: y() const
 {
     return d_y;
 }
+void Case:: modifier( double x ,double y)
+{
+    d_x=x;
+    d_y=y;
+}

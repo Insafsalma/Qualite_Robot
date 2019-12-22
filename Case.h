@@ -9,6 +9,7 @@ class Case
         virtual ~Case();
         double x() const;
         double y() const;
+        void modifier(double x, double y);
     private:
         double d_x;
         double d_y;
