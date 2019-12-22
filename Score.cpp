@@ -1,16 +1,16 @@
 #include "Score.h"
 
-Score::Score(int robot_detruit,int nbrrobotsterrain):d_nbr_robots_detruits{robot_detruit},d_nbr_robots_terrain{nbrrobotsterrain}
+Score::Score(int robot_detruit,int nbr_robots_terrain):d_nbr_robots_detruits{robot_detruit},d_nbr_robots_terrain{nbr_robots_terrain}
 { }
 
 Score::~Score()
 { }
-int nbrRobotDetruits() const
+int Score::nbrRobotDetruits() const
 {
     return d_nbr_robots_detruits;
 }
 
-int nbrRobotTerrain() const
+int Score::nbrRobotTerrain() const
 {
-    int d_nbr_robots_terrain;
+    return d_nbr_robots_terrain;
 }

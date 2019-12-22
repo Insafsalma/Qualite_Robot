@@ -5,7 +5,7 @@
 class Score
 {
    public:
-        Score(int robot_detruit,int nbrrobotsterrain);
+        Score(int robot_detruit,int nbr_robots_terrain);
         virtual ~Score();
         int nbrRobotDetruits() const;
         int nbrRobotTerrain() const;
