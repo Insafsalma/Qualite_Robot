@@ -2,13 +2,14 @@
 #define JOUEUR_H
 #include <string>
 #include "Case.h"
+#include "deplacement.h"
 class Joueur
 {
       public:
         Joueur(std::string type_joueur, Case& position, int dureDeVie);
         std::string joueurType() const;
         int joueurDureDeVie() const;
-
+        void sedeplace(deplacement& deplacement);
     private:
         std::string d_type_joueur;
         Case& d_position;
