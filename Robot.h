@@ -1,20 +1,18 @@
 #ifndef ROBOT_H
 #define ROBOT_H
-
-
+#include "Case.h"
+#include "deplacement.h"
 class Robot
 {
     public:
         Robot();
         ~Robot();
-        Robot( double x,double y, double direction);
-        double x() const;
-        double y() const;
+        Robot(Case& position, bool moderne);
+        Case& position() const;
         bool statutRobot() const ;
+        void sedeplace(deplacement& deplacement);
     private:
-        double d_x;
-        double d_y;
-        double d_direction;
+        Case& d_position;
         bool d_type_moderne;
 };
 
