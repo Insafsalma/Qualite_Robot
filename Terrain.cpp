@@ -2,18 +2,13 @@
 #include<vector>
 #include "Case.h"
 
-Terrain::Terrain()
+void Terrain::modifier(int col, int lign)
 {
-    for(int i=1; i<6;++i)
-    {
-        for(int j=1; j<6;++j)
-        {
-            Case c{i,j};
-            d_matrice.push_back(c);
-        }
-    }
+    d_nbr_col=col;
+    d_nbr_lignes=lign;
+    remplir_terrain();
 }
-Terrain::Terrain(int nbrcol, int nbrlignes): d_nbr_col{nbrcol},d_nbr_lignes{nbrlignes}
+void Terrain:: remplir_terrain()
 {
     for(int i=1; i<=d_nbr_lignes ;++i)
     {
@@ -24,6 +19,16 @@ Terrain::Terrain(int nbrcol, int nbrlignes): d_nbr_col{nbrcol},d_nbr_lignes{nbrl
         }
     }
 }
+Terrain::Terrain():d_nbr_col{6},d_nbr_lignes{6}
+{
+    remplir_terrain();
+}
+Terrain::Terrain(int nbrcol, int nbrlignes): d_nbr_col{nbrcol},d_nbr_lignes{nbrlignes}
+{
+    remplir_terrain();
+}
 
 Terrain::~Terrain()
 { }
+
+
