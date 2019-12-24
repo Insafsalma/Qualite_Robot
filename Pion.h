@@ -11,7 +11,7 @@ class Pion
         virtual ~Pion();
         virtual bool TypePion();
         virtual Case& position() const;
-        virtual void sedeplace(deplacement& deplacement,char act);
+        virtual void sedeplace(deplacement& deplacement,char act,std::ostream& ost);
 
     private:
         bool d_normal;
