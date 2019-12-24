@@ -18,8 +18,9 @@ virtual Case& Pion::position const override
     return d_position;
 }
 
-void Pion:: sedeplace(deplacement& deplacement, char act){
-    switch(act)
+void Pion:: sedeplace(deplacement& deplacement,char action,std::ostream& ost)
+{
+    switch(action)
     {
         case '8':
             deplacement.Avancer(d_position);
@@ -55,8 +56,8 @@ void Pion:: sedeplace(deplacement& deplacement, char act){
             deplacement.ReculerGauche(d_position);
             d_position=deplacement.nouvelle_position();
             break;
+            default : ost<<"erreur"<<std::endl;
        }
-
-}
+    }
 }
 
