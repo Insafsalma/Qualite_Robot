@@ -1,19 +1,17 @@
 #include "Pion.h"
 
-Pion::Pion()
-{}
 Pion::Pion(Case& position, bool normal):d_position{position},d_normal{normal}{}
 Pion::~Pion()
 {
 
 }
 
-virtual bool Pion::TypePion()
+bool Pion::TypePion()
 {
     return d_normal;
 }
 
-virtual Case& Pion::position const override
+Case& Pion::position() const
 {
     return d_position;
 }
@@ -38,7 +36,7 @@ void Pion:: sedeplace(deplacement& deplacement,char action,std::ostream& ost)
             deplacement.TournerGauche(d_position);
             d_position=deplacement.nouvelle_position();
             break;
-        if(d_type_moderne)
+        if(d_normal)
        {
             case '9':
             deplacement.AvancerDroite(d_position);

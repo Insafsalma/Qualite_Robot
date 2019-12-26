@@ -1,12 +1,11 @@
 #ifndef PION_H
 #define PION_H
-
-
+#include "Case.h"
+#include "deplacement.h"
+#include <iostream>
 class Pion
 {
-
     public:
-        Pion();
         Pion(Case& position, bool normal);
         virtual ~Pion();
         virtual bool TypePion();

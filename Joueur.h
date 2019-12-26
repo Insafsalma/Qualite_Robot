@@ -3,8 +3,9 @@
 #include <string>
 #include "Case.h"
 #include "deplacement.h"
+#include "Pion.h"
 
-class Joueur:public Pion
+class Joueur: public Pion
 {
       public:
         Joueur(Case& position,bool normal);

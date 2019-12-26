@@ -2,7 +2,8 @@
 #define ROBOT_H
 #include "Case.h"
 #include "deplacement.h"
-class Robot:public Pion
+#include "Pion.h"
+class Robot: public Pion
 {
     public:
         Robot(Case& position, bool moderne);
