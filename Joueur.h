@@ -8,9 +8,6 @@ class Joueur:public Pion
 {
       public:
         Joueur(Case& position,bool normal);
-        virtual bool TypePion()override;
-        void sedeplace(deplacement& deplacement);
-    private:
 
 };
 
