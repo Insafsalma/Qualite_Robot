@@ -3,18 +3,18 @@
 #include <string>
 #include "Case.h"
 #include "deplacement.h"
-class Joueur
+
+class Joueur:public Pion
 {
       public:
-        Joueur(std::string type_joueur, Case& position, int dureDeVie);
-        std::string joueurType() const;
-        int joueurDureDeVie() const;
+        Joueur(Case& position,bool normal);
+        virtual bool TypePion()override;
         void sedeplace(deplacement& deplacement);
     private:
-        std::string d_type_joueur;
-        Case& d_position;
-        int d_dureDeVie;
+
 };
+
+
 
 
 #endif // JOUEUR_H
