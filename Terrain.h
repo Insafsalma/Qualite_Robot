@@ -10,6 +10,7 @@ class Terrain
         Terrain(int nbr_colonnes, int nbr_lignes);
         virtual ~Terrain();
         int taille_terrain() const;
+        std::vector<Case> Cases() const;
         void modifier(int col, int lign);
         void remplir_terrain();
     private:

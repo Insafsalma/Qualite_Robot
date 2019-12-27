@@ -18,3 +18,7 @@ void Case:: modifier( double x ,double y)
     d_x=x;
     d_y=y;
 }
+bool Case :: operator==(const Case&C)const
+{
+    return (d_x==C.d_x)&&(d_y==C.d_y) ;
+}
