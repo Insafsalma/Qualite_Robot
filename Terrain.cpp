@@ -31,4 +31,9 @@ Terrain::Terrain(int nbrcol, int nbrlignes): d_nbr_col{nbrcol},d_nbr_lignes{nbrl
 Terrain::~Terrain()
 { }
 
+std::vector<Case> Terrain:: Cases() const
+{
+    return d_matrice;
+}
+
 
