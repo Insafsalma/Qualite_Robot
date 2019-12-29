@@ -1,6 +1,8 @@
 #include "Pion.h"
 
-Pion::Pion(Case& position, bool normal):d_position{position},d_normal{normal}{}
+Pion::Pion(Case& position, bool normal,bool joueur):d_position{position},d_type_deplacement_normal{normal},d_type_joueur{joueur}
+{
+}
 Pion::~Pion()
 {
 
@@ -8,7 +10,7 @@ Pion::~Pion()
 
 bool Pion::TypePion()
 {
-    return d_normal;
+    return d_type_deplacement_normal;
 }
 
 Case& Pion::position() const
@@ -16,7 +18,7 @@ Case& Pion::position() const
     return d_position;
 }
 
-void Pion:: sedeplace(deplacement& deplacement,char action,std::ostream& ost)
+void Pion:: sedeplace(deplacement& deplacement,char action)
 {
     switch(action)
     {
@@ -36,7 +38,7 @@ void Pion:: sedeplace(deplacement& deplacement,char action,std::ostream& ost)
             deplacement.TournerGauche(d_position);
             d_position=deplacement.nouvelle_position();
             break;
-        if(d_normal)
+        if((d_type_deplacement_normal && d_type_joueur)||(!d_type_deplacement_normal && !d_type_joueur))
        {
             case '9':
             deplacement.AvancerDroite(d_position);
@@ -54,7 +56,7 @@ void Pion:: sedeplace(deplacement& deplacement,char action,std::ostream& ost)
             deplacement.ReculerGauche(d_position);
             d_position=deplacement.nouvelle_position();
             break;
-            default : ost<<"erreur"<<std::endl;
+            default : std::cout<<"erreur"<<std::endl;
        }
     }
 }

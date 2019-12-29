@@ -7,13 +7,13 @@
 class Jeu
 {
     public:
-        Jeu();
-        Jeu(Pion& joueur,Terrain& terrain,int nbr_Robots);
+        Jeu(Pion& joueur,Terrain& terrain);
         virtual ~Jeu();
+        void configurer_terrain();
+        Terrain terrain_du_jeu() const;
         void creer_terrain();
-        void configurer_terrain(Terrain& terrain_config);
-        void choisir_operation(char operation);
-        void Run_game();
+        Pion joueur() const;
+        void start_game(deplacement deplacement);
     private:
         Terrain d_terrain;
         Pion d_joueur;

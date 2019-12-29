@@ -1,4 +1,5 @@
 #include "deplacement.h"
+#include "Case.h"
 
 deplacement::deplacement(Case& position):d_position{position}{}
 

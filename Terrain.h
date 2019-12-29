@@ -13,6 +13,8 @@ class Terrain
         std::vector<Case> Cases() const;
         void modifier(int col, int lign);
         void remplir_terrain();
+        int nombre_colonne() const;
+        int nombre_lignes() const;
     private:
         int d_nbr_col,d_nbr_lignes;
         std::vector<Case> d_matrice;
