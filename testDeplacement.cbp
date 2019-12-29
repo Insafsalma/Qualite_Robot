@@ -32,10 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Case.cpp" />
+		<Unit filename="Case.h" />
+		<Unit filename="MainTest.cpp" />
 		<Unit filename="deplacement.cpp" />
 		<Unit filename="deplacement.h" />
 		<Unit filename="doctest.h" />
-		<Unit filename="main.cpp" />
 		<Unit filename="testDeplacement.cpp" />
 		<Extensions>
 			<code_completion />
