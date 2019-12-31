@@ -22,9 +22,13 @@ Jeu::Jeu(Pion& joueur,Terrain& terrain,Score& score):d_joueur{joueur},d_terrain{
         --taille;
     }
 }
-
-Jeu::~Jeu()
+Terrain Jeu::terrain_du_jeu() const
 {
+    return d_terrain;
+}
+Pion Jeu::joueur() const
+{
+    return d_joueur;
 }
 void Jeu::configurer_terrain()
 {
@@ -39,26 +43,18 @@ void Jeu::creer_terrain()
 {
     configurer_terrain();
 }
-Terrain Jeu::terrain_du_jeu() const
-{
-    return d_terrain;
-}
-Pion Jeu::joueur() const
-{
-    return d_joueur;
-}
 void Jeu::creer_debris()
 {
     Case position {d_Robots[0].position()};
     for(int i=1;i<=d_Robots.size();++i)
     {
-
         if(d_Robots[i].position()== position)
         {
             d_Robots.erase(d_Robots.begin()+i);
         }
     }
     debris debris(position);
+    d_Debris.push_back(debris);
 }
 void Jeu::end_Game()
 {
@@ -86,5 +82,7 @@ void Jeu::start_game(deplacement deplacement)
         d_joueur.sedeplace(deplacement,action);
         std::cout<<"Le joueur s'est déplacé à la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
     }
-
+}
+Jeu::~Jeu()
+{
 }
