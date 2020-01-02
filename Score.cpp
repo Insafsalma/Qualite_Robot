@@ -13,7 +13,7 @@ int Score::nbrRobotDetruits() const
     return d_nbr_robots_detruits;
 }
 
-void Score::DebutDeVie() 
+void Score::DebutDeVie()
 {
             time_t timer1;
             time(&timer1);
@@ -42,7 +42,7 @@ std::string Score::DureeDeVie()const
            // int Ha= (TimeS/3600);
             int Ma= (TimeS/60);
             int Sa= (TimeS%60);
-            std::cout<<" La durÃ©e de jeu est : " <<Ma <<" : "<< Sa<<std::endl;
+            std::cout<<" La durée de jeu est : " <<Ma <<" : "<< Sa<<std::endl;
 
 }
 int Score::nbrRobotTerrain() const
@@ -54,10 +54,7 @@ void Score:: ScoreFinal()const
 {
 
     std::cout<<" Votre Score final : "<<std::endl;
-   std::cout<<" Votre durÃ©e de vie est : " << DureeDeVie()<<std::endl;
-    std::cout<<" Le nombre de robot que vous avez dÃ©truit : " << nbrRobotDetruits() <<std::endl;
+   std::cout<<" Votre durée de vie est : " << DureeDeVie()<<std::endl;
+    std::cout<<" Le nombre de robot que vous avez détruit : " << nbrRobotDetruits() <<std::endl;
 
 }
-
-
-

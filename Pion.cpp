@@ -7,10 +7,13 @@ Pion::~Pion()
 {
 
 }
-
-bool Pion::TypePion()
+bool Pion::Typedeplacement() const
 {
     return d_type_deplacement_normal;
+}
+bool Pion::TypePion() const
+{
+    return d_type_joueur;
 }
 
 Case& Pion::position() const

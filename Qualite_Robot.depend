@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1577974099 source:d:\l3 miage\qualite\qualite_robot-master\case.cpp
+	"Case.h"
+
+1577974098 d:\l3 miage\qualite\qualite_robot-master\case.h
+	<string>
+
+1577335072 source:d:\l3 miage\qualite\qualite_robot-master\debris.cpp
+	"debris.h"
+	"Case.h"
+
+1577335072 d:\l3 miage\qualite\qualite_robot-master\debris.h
+	"Case.h"
+
+1577577299 source:d:\l3 miage\qualite\qualite_robot-master\deplacement.cpp
+	"deplacement.h"
+	"Case.h"
+
+1577577296 d:\l3 miage\qualite\qualite_robot-master\deplacement.h
+	"Case.h"
+
+1577971538 source:d:\l3 miage\qualite\qualite_robot-master\main.cpp
+	<iostream>
+	"Jeu.h"
+
+1577970158 d:\l3 miage\qualite\qualite_robot-master\jeu.h
+	"Terrain.h"
+	"Pion.h"
+	"Score.h"
+	"debris.h"
+	<vector>
+
+1577631561 d:\l3 miage\qualite\qualite_robot-master\terrain.h
+	<vector>
+	"Case.h"
+
+1577973311 d:\l3 miage\qualite\qualite_robot-master\pion.h
+	"Case.h"
+	"deplacement.h"
+	<iostream>
+
+1577969990 d:\l3 miage\qualite\qualite_robot-master\score.h
+	<string>
+	<ctime>
+
+1577973438 source:d:\l3 miage\qualite\qualite_robot-master\pion.cpp
+	"Pion.h"
+
+1577969939 source:d:\l3 miage\qualite\qualite_robot-master\score.cpp
+	<iostream>
+	"Score.h"
+	<ctime>
+
+1577631690 source:d:\l3 miage\qualite\qualite_robot-master\terrain.cpp
+	"Terrain.h"
+	<vector>
+	"Case.h"
+
