@@ -66,7 +66,7 @@ void Jeu::end_Game()
 void Jeu::start_game(deplacement deplacement)
 {
     char action;
-    Score score_du_jeu{0,d_Robots.size()};
+    d_score_du_jeu{0,d_Robots.size()};
     std::cout<<"Le terrain contient : "<< d_terrain.taille_terrain()<< " cases"<<std::endl;
     std::cout<<"Le joueur est sur la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
     for(auto r : d_Robots)
