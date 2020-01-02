@@ -15,7 +15,7 @@ class Score
     private:
     int d_nbr_robots_detruits;
     int d_nbr_robots_terrain;
-    int d_debut-vie;
+    int d_debut_vie;
 };
 
 #endif // SCORE_H
