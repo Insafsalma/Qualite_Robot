@@ -15,6 +15,8 @@ class Jeu
         Pion joueur() const;
         void configurer_terrain();
         void creer_terrain();
+        void Enregistrer()const;
+        void LectureDuFichier() const;
         void start_game(deplacement deplacement);
         void creer_debris();
         void end_Game();
