@@ -48,16 +48,11 @@ void Jeu:: Enregistrer()const
 
 void Jeu :: LectureDuFichier() const
 {
-    std::string line;
     ifstream fichier("jeu.txt")
 
         if(fichier)
         {
-            while(getline(fichier,line))
-            {
-                std::cout << line << std::endl;
-            }
-
+            fichier >>d_terrain.d_nbr_col()>> d_terrain.d_nbr_lignes()>>d_terrain.taille_terrain()>>d_score_du_jeu.DureeDeVie()>>d_joueur.position();
             fichier.close();
         }
         else
