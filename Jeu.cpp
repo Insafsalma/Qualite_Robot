@@ -26,6 +26,45 @@ Terrain Jeu::terrain_du_jeu() const
 {
     return d_terrain;
 }
+void Jeu:: Enregistrer()const
+{
+    ofstream fichier("jeu.txt", ios::out | ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
+
+        if(fichier)
+        {
+                fichier << d_terrain.d_nbr_col() << std::endl; // Le nombre de colonne
+                fichier << d_terrain.d_nbr_lignes() << std::endl; // Le nombre des lignes
+                fichier << d_terrain.taille_terrain() << std::endl // La taille du terrain
+                fichier << d_score_du_jeu.DureeDeVie()  << endl; //Duréé
+                fichier << d_joueur.position() << std::endl; //La position du joueur
+
+                fichier.close();
+        }
+        else{
+                cerr << "Impossible d'ouvrir le fichier !" << endl;
+
+        }
+}
+
+void Jeu :: LectureDuFichier() const
+{
+    std::string line;
+    ifstream fichier("jeu.txt")
+
+        if(fichier)
+        {
+            while(getline(fichier,line))
+            {
+                std::cout << line << std::endl;
+            }
+
+            fichier.close();
+        }
+        else
+        {
+             cerr << "Impossible d'ouvrir le fichier !" << endl;
+        }
+}
 Pion Jeu::joueur() const
 {
     return d_joueur;
