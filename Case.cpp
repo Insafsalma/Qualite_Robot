@@ -1,5 +1,6 @@
 #include "Case.h"
 
+Case::Case(){}
 Case:: Case(double x, double y):d_x{x},d_y{y}
 {}
 Case::~Case()

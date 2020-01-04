@@ -3,11 +3,12 @@
 #include "Pion.h"
 #include "debris.h"
 #include "Score.h"
+#include "deplacement.h"
 #include <iostream>
 #include <vector>
 #include <fstream>
 
-Jeu::Jeu(Pion& joueur,Terrain& terrain,Score& score):d_joueur{joueur},d_terrain{terrain},d_score_du_jeu{score}
+Jeu::Jeu(Pion& joueur,Terrain& terrain,Score& score,deplacement deplacement):d_joueur{joueur},d_terrain{terrain},d_score_du_jeu{score},d_deplacement{deplacement}
 {
     int taille = d_terrain.taille_terrain();
     int colonnes = d_terrain.nombre_colonne();
@@ -70,7 +71,7 @@ void Jeu::Affichage()
     std::cout<<"Actions possibles: \nAvancer = 8 Reculer = 2 Tourner Droite = 6 Tourner Gauche = 4 "<<std::endl;
     std::cout<<"Diagonal: Haut gauche = 7 Haut droit = 9 Bas Gauche = 1 Bas Droit = 3" <<std::endl;
 }
-void Jeu::start_game(deplacement deplacement)
+void Jeu::start_game()
 {
     char action;
     d_score_du_jeu= Score{0,d_Robots.size()};
@@ -79,7 +80,7 @@ void Jeu::start_game(deplacement deplacement)
     {
         std::cin>>action;
         d_score_du_jeu.DebutDeVie();
-        d_joueur.sedeplace(deplacement,action);
+        d_joueur.sedeplace(d_deplacement,action);
         std::cout<<"Le joueur s'est déplacé à la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
         //déplacement des robots
         creer_debris();

@@ -5,11 +5,10 @@
 using namespace std;
 void choisir_operation(char operation,Jeu jeu)
 {
-    deplacement deplacement{jeu.joueur().position()};
     switch(operation)
     {
         case 's':
-            jeu.start_game(deplacement);
+            jeu.start_game();
             break;
         case 'x':
             jeu.configurer_terrain();
@@ -29,11 +28,19 @@ void choisir_operation(char operation,Jeu jeu)
 void Run_game()
 {
     char operation;
-    Case milieu{3,3};
-    Pion joueur{milieu,true,true};
     Terrain terrain{};
+    Case milieu{};
+    if(terrain.nombre_lignes()%2 ==0)
+    {
+        milieu.modifier(1,terrain.nombre_lignes()/2);
+    }else
+    {
+        milieu.modifier(1,(terrain.nombre_lignes()/2)+1);
+    }
+    Pion joueur{milieu,true,true};
+    deplacement deplacement{joueur.position()};
     Score score{0,terrain.nombre_colonne()};
-    Jeu jeu{joueur,terrain,score};
+    Jeu jeu{joueur,terrain,score,deplacement};
     std::cout<<"Creer terrain: c | ";
     std::cout<<"Configurer terrain: x |";
     std::cout<<"Start Game: s |";

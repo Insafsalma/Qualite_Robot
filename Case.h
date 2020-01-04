@@ -5,6 +5,7 @@
 class Case
 {
     public:
+        Case();
         Case(double x, double y);
         virtual ~Case();
         double x() const;
