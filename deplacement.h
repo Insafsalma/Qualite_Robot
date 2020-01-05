@@ -17,6 +17,7 @@ class deplacement
         void ReculerDroite(Case& position_init);
         void ReculerGauche(Case& position_init);
         Case& nouvelle_position() const;
+        void modifier(Case position);
      private:
         Case& d_position;
 };

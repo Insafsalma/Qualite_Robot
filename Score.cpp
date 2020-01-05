@@ -13,7 +13,7 @@ int Score::nbrRobotDetruits() const
     return d_nbr_robots_detruits;
 }
 
-int Score::DebutDeVie() const
+void Score::DebutDeVie()
 {
             time_t timer1;
             time(&timer1);
@@ -23,9 +23,7 @@ int Score::DebutDeVie() const
             h = newTime1->tm_hour;		// Les heures sont dans "heures"
             m = newTime1->tm_min;		// Les end_minutes sont dans "minutes"
             s = newTime1->tm_sec;		// Les end_secondes sont dans "end_secondes"
-
-            int TotaleSeconds1= (h*3600)+(m*60)+s;
-            return TotaleSeconds1;
+            d_debut_vie= (h*3600)+(m*60)+s;
 }
 
 std::string Score::DureeDeVie()const
@@ -39,7 +37,7 @@ std::string Score::DureeDeVie()const
             m2 = newTime2->tm_min;
             s2 = newTime2->tm_sec;
             int TotaleSeconds2=(h2*3600)+(m2*60)+s2;
-            int TimeS=TotaleSeconds2-DebutDeVie();
+            int TimeS=TotaleSeconds2-d_debut_vie;
 
            // int Ha= (TimeS/3600);
             int Ma= (TimeS/60);
@@ -60,6 +58,3 @@ void Score:: ScoreFinal()const
     std::cout<<" Le nombre de robot que vous avez détruit : " << nbrRobotDetruits() <<std::endl;
 
 }
-
-
-

@@ -1,0 +1,64 @@
+# depslib dependency file v1.0
+1578138332 source:d:\l3 miage\qualite\qualite_robot-tests\case.cpp
+	"Case.h"
+
+1578138340 d:\l3 miage\qualite\qualite_robot-tests\case.h
+	<string>
+
+1578237758 source:d:\l3 miage\qualite\qualite_robot-tests\deplacement.cpp
+	"deplacement.h"
+	"Case.h"
+
+1578237783 d:\l3 miage\qualite\qualite_robot-tests\deplacement.h
+	"Case.h"
+
+1577681446 source:d:\l3 miage\qualite\qualite_robot-tests\maintest.cpp
+	"doctest.h"
+
+1574434054 d:\l3 miage\qualite\qualite_robot-tests\doctest.h
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<ciso646>
+	<type_traits>
+	"doctest_fwd.h"
+	<ctime>
+	<cmath>
+	<climits>
+	<math.h>
+	<new>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<limits>
+	<utility>
+	<fstream>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<iomanip>
+	<vector>
+	<atomic>
+	<mutex>
+	<set>
+	<map>
+	<exception>
+	<stdexcept>
+	<csignal>
+	<cfloat>
+	<cctype>
+	<cstdint>
+	<sys/types.h>
+	<unistd.h>
+	<sys/sysctl.h>
+	<AfxWin.h>
+	<Windows.h>
+	<io.h>
+	<sys/time.h>
+	<unistd.h>
+
+1577681446 source:d:\l3 miage\qualite\qualite_robot-tests\testdeplacement.cpp
+	"deplacement.h"
+	"Case.h"
+	"doctest.h"
+

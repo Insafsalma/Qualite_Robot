@@ -8,11 +8,11 @@ TEST_CASE(" vérifer le que le pion se dépéplace correctement ")
     std::ostream& ost{std::cout};
     Case C{10.00,15.00};
     deplacement  D {C};
-    Pion P{C,false};
+    Pion P{C,false,true};
  SUBCASE("pion avance correcetemnt")
  {
     Case C1{10,16};
-    P.sedeplace(D,8,ost);
+    P.sedeplace(D,8);
     REQUIRE_EQ(P.position().x(),C1.x());
     REQUIRE_EQ(P.position().y(),C1.y());
  }
