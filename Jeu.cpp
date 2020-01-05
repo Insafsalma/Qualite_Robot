@@ -54,8 +54,8 @@ void Jeu::creer_debris()
 }
 void Jeu::end_Game()
 {
-    std::cout <<"le jeu est términé"<<std:: endl;
-    std::cout<<"votre durée de vie est: "<<d_score_du_jeu.DureeDeVie();
+    std::cout <<"le jeu est tÃ©rminÃ©"<<std:: endl;
+    std::cout<<"votre durÃ©e de vie est: "<<d_score_du_jeu.DureeDeVie();
 }
 void Jeu::Affichage()
 {
@@ -125,8 +125,8 @@ void Jeu::start_game()
         std::cin>>action;
         d_score_du_jeu.DebutDeVie();
         d_joueur.sedeplace(action);
-        std::cout<<"Le joueur s'est déplacé à la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
-        //déplacementRobot();
+        std::cout<<"Le joueur s'est dÃ©placÃ© Ã  la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
+        //dÃ©placementRobot();
         creer_debris();
         if(d_Robots.size()== 0)
         {
@@ -145,16 +145,32 @@ void Jeu::start_game()
 }
 void Jeu:: Enregistrer()const
 {
-    std::ofstream fichier("jeu.txt", std::ios::out | std::ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
+    std::ofstream fichier("jeu.txt", std::ios::out | std::ios::trunc);  // ouverture en Ã©criture avec effacement du fichier ouvert
 
         if(fichier)
         {
                 fichier << d_terrain.nombre_colonne() << std::endl; // Le nombre de colonne
                 fichier << d_terrain.nombre_lignes()<< std::endl; // Le nombre des lignes
                 fichier << d_terrain.taille_terrain() << std::endl; // La taille du terrain
-                fichier << d_score_du_jeu.DureeDeVie()  << std::endl; //Duréé
+                fichier << d_score_du_jeu.DureeDeVie()  << std::endl; //DurÃ©Ã©
                 fichier << d_joueur.position().x()<< std::endl; //La position du joueur
                 fichier << d_joueur.position().y()<< std::endl;
+                fichier << d_joueur.TypePion() << std::endl; // le type du joueur soit expert soit normal
+                fichier << d_score_du_jeu.nbrRobotTerrain() <<std::endl; //nombre de robots sur terrain
+                fichier << d_Debris.size() <<std::endl;
+
+                fichier << d_Robots.size() << std::endl;
+                    for(int i=1;i<=d_Robots.size();++i)
+                    {
+                        fichier << d_Robots[i].position().x() <<std::endl; //placement x de robot
+                        fichier << d_Robots[i].position().y() <<std::endl; //placement y de robot
+                    }
+
+                    for( int i=1;i<=d_Debris.size();++i)
+                    {
+                        fichier << d_Debris[i].position_debris().x() << std::endl;
+                        fichier << d_Debris[i].position_debris().y() << std::endl;
+                    }
                 fichier.close();
         }
         else{
