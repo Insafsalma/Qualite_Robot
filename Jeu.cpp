@@ -55,10 +55,29 @@ void Jeu::creer_debris()
     debris debris(position);
     d_Debris.push_back(debris);
 }
+
+oid Jeu::creer_debris()
+{
+    Case position {d_Robots[0].position()};
+    int taille=d_Robots.size();
+    for(int i=1;i<=d_Robots.size();++i)
+    {
+        if(d_Robots[i].position()== position)
+        {
+            d_Robots[i].swap(d_Robots[taille]);
+            d_Robots.pop_back();
+
+        }
+    }
+    debris debris(position);
+    d_Debris.push_back(debris);
+}
+
+
 void Jeu::end_Game()
 {
-    std::cout <<"le jeu est términé"<<std:: endl;
-    std::cout<<"votre durée de vie est: "<<d_score_du_jeu.DureeDeVie();
+    std::cout <<"le jeu est tÃ©rminÃ©"<<std:: endl;
+    std::cout<<"votre durÃ©e de vie est: "<<d_score_du_jeu.DureeDeVie();
 }
 void Jeu::Affichage()
 {
@@ -81,8 +100,8 @@ void Jeu::start_game()
         std::cin>>action;
         d_score_du_jeu.DebutDeVie();
         d_joueur.sedeplace(d_deplacement,action);
-        std::cout<<"Le joueur s'est déplacé à la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
-        //déplacement des robots
+        std::cout<<"Le joueur s'est dÃ©placÃ© Ã  la case: "<<d_joueur.position().x()<<","<<d_joueur.position().y()<<std::endl;
+        //dÃ©placement des robots
         creer_debris();
         if(d_Robots.size()== 0)
         {
@@ -101,14 +120,14 @@ void Jeu::start_game()
 }
 void Jeu:: Enregistrer()const
 {
-    std::ofstream fichier("jeu.txt", std::ios::out | std::ios::trunc);  // ouverture en écriture avec effacement du fichier ouvert
+    std::ofstream fichier("jeu.txt", std::ios::out | std::ios::trunc);  // ouverture en Ã©criture avec effacement du fichier ouvert
 
         if(fichier)
         {
                 fichier << d_terrain.nombre_colonne() << std::endl; // Le nombre de colonne
                 fichier << d_terrain.nombre_lignes()<< std::endl; // Le nombre des lignes
                 fichier << d_terrain.taille_terrain() << std::endl; // La taille du terrain
-                fichier << d_score_du_jeu.DureeDeVie()  << std::endl; //Duréé
+                fichier << d_score_du_jeu.DureeDeVie()  << std::endl; //DurÃ©Ã©
                 fichier << d_joueur.position().x()<< std::endl; //La position du joueur
                 fichier << d_joueur.position().y()<< std::endl;
                 fichier.close();
