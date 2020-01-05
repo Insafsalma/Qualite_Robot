@@ -185,8 +185,32 @@ void Jeu :: LectureDuFichier()
 
         if(fichier)
         {
-            //fichier >>d_terrain.nombre_colonne()>> d_terrain.nombre_lignes()>>d_terrain.taille_terrain()>>d_score_du_jeu.DureeDeVie()>>d_joueur.position();
-            fichier.close();
+           int col, lign, taille,JoueurX,JoueurY, nbRobotSurTerrain, nbDebris;
+           std::string dureDeVie;
+           bool TypePion;
+           fichier >> col;
+           fichier >> lign;
+           d_terrain.modifier(col,lign);
+           fichier>>taille;
+           fichier >>dureDeVie;
+           fichier>>JoueurX;
+           fichier>>JoueurY;
+           fichier>>TypePion;
+           fichier>>nbRobotSurTerrain;
+           fichier>>nbDebris;
+
+                 for(int i=1;i<=nbRobotSurTerrain*2;++i)
+                    {
+                        fichier >> d_Robots[i].position().x() >> std::endl; //placement x de robot
+                        fichier >> d_Robots[i].position().y() >> std::endl; //placement y de robot
+                    }
+
+                    for( int i=1;i<=d_Debris.size()*2;++i)
+                    {
+                        fichier >> d_Debris[i].position().x() >> std::endl;
+                        fichier >> d_Debris[i].position().y() >> std::endl;
+                    }
+           fichier.close();
         }
         else
         {
