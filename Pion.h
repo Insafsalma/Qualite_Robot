@@ -12,6 +12,8 @@ class Pion
         bool TypePion() const;
         Case& position() const;
         void sedeplace(deplacement& deplacement,char act);
+        void swap(Pion pion);
+        void modifier(Pion pion);
     private:
         bool d_type_deplacement_normal;
         bool d_type_joueur;
