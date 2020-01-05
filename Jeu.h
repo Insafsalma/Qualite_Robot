@@ -21,6 +21,8 @@ class Jeu
         void Enregistrer()const;
         void LectureDuFichier();
         void Affichage();
+        void deplacementRobot(char action);
+        void actionRobots(char action1,char action2,char action3,char action4);
     private:
         Pion d_joueur;
         Terrain d_terrain;
