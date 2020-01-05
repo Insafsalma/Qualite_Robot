@@ -14,7 +14,8 @@ class Jeu
         virtual ~Jeu();
         Terrain terrain_du_jeu() const;
         Pion joueur() const;
-        void configurer_terrain();
+        std::vector<Pion> Robots() const;
+        std::vector<debris> Debris() const;
         void start_game();
         void creer_debris();
         void end_Game();

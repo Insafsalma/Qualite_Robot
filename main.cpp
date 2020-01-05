@@ -1,8 +1,17 @@
 #include <iostream>
 #include "Jeu.h"
-#
+#include "Terrain.h"
 
 using namespace std;
+void configurer_terrain(Jeu jeu)
+{
+    int col, lign;
+    std::cout<<"Nombre de colonnes: "<<std::endl;
+    std::cin>>col;
+    std::cout<<"Nombre de lignes: "<<std::endl;
+    std::cin>>lign;
+    jeu.terrain_du_jeu().modifier(col,lign);
+}
 void choisir_operation(char operation,Jeu jeu)
 {
     switch(operation)
@@ -11,10 +20,10 @@ void choisir_operation(char operation,Jeu jeu)
             jeu.start_game();
             break;
         case 'x':
-            jeu.configurer_terrain();
+            configurer_terrain(jeu);
             break;
         case 'c':
-            jeu.configurer_terrain();
+            configurer_terrain(jeu);
             break;
         case 'e':
             jeu.Enregistrer();
@@ -29,16 +38,16 @@ void Run_game()
 {
     char operation;
     Terrain terrain{};
-    Case milieu{};
-    if(terrain.nombre_lignes()%2 ==0)
+    Case milieu=terrain.Cases()[terrain.taille_terrain()/2];
+    /*if(terrain.nombre_lignes()%2 ==0)
     {
         milieu.modifier(1,terrain.nombre_lignes()/2);
     }else
     {
         milieu.modifier(1,(terrain.nombre_lignes()/2)+1);
-    }
-    Pion joueur{milieu,true,true};
-    deplacement deplacement{joueur.position()};
+    }*/
+    deplacement deplacement{milieu};
+    Pion joueur{milieu,true,true,deplacement};
     Score score{0,terrain.nombre_colonne()};
     Jeu jeu{joueur,terrain,score,deplacement};
     std::cout<<"Creer terrain: c | ";
