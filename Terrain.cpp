@@ -4,7 +4,6 @@
 
 void Terrain:: remplir_terrain()
 {
-    d_matrice.clear();
     for(int i=1; i<=d_nbr_lignes ;++i)
     {
         for(int j=1; j<=d_nbr_col;++j)
@@ -16,11 +15,19 @@ void Terrain:: remplir_terrain()
 }
 Terrain::Terrain():d_nbr_col{5},d_nbr_lignes{5}
 {
-    remplir_terrain();
+    if(d_matrice.size() !=0)
+    {
+         d_matrice.clear();
+         remplir_terrain();
+    }else{ remplir_terrain();}
 }
 Terrain::Terrain(int nbrcol, int nbrlignes): d_nbr_col{nbrcol},d_nbr_lignes{nbrlignes}
 {
-    remplir_terrain();
+    if(d_matrice.size() !=0)
+    {
+         d_matrice.clear();
+         remplir_terrain();
+    }else{ remplir_terrain();}
 }
 
 Terrain::~Terrain()
